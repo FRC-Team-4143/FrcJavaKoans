@@ -216,6 +216,10 @@ public class AboutConsoleAndVariables {
      */
     public static void askAndDisplayNameOnASingleLineInConsole() {
 
+        System.out.println("What is your name?");
+        String name = readLine();
+        System.out.println("Your name is: " + name);
+
     }
 
     /**
