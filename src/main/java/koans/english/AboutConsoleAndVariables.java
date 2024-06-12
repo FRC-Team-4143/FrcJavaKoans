@@ -29,6 +29,8 @@ public class AboutConsoleAndVariables {
      */
     public static void sayHelloInConsole() {
 
+        System.out.println("Hello!");
+
     }
 
     /**
@@ -55,6 +57,8 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void computeTwoAndTwo() {
+
+        System.out.println(2+2);
 
     }
 
@@ -98,6 +102,10 @@ public class AboutConsoleAndVariables {
      */
     public static void createAndDisplayAVariable() {
 
+        int pigNbOfLegs = 1 + 1 + 1 + 1;
+
+        System.out.println(pigNbOfLegs);
+
     }
 
     /**
@@ -117,6 +125,10 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void createAndDisplayAStringVariable() {
+
+        String greeting = "Hello!";
+
+        System.out.println(greeting);
 
     }
 
@@ -152,6 +164,8 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void askAndDisplayNameInConsole() {
+
+        System.out.println();
 
     }
 
