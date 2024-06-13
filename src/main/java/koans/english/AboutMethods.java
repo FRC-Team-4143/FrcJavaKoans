@@ -27,6 +27,31 @@ public class AboutMethods {
      */
     public static void computeAgeIn5And10And20YearsConsole() {
 
+        int yearGap = 5;
+
+        for(int i = 0; i < 3; i++){
+
+            if(i == 2){
+
+                computeAge(yearGap * (i+2));
+
+            } else {
+
+                computeAge(yearGap * (i+1));
+
+            }      
+
+        }
+
+    }
+
+    public static void computeAge(int y){
+
+        System.out.println("What is your age?");
+        int age = Integer.parseInt(readLine());
+        System.out.println("In " + y + " years from now, you will be " + (age+y) + ".");
+        
+        
     }
 
     /**
