@@ -254,7 +254,7 @@ public class AboutMethods {
      * legs(2, 3, 4) should return 32
      * 
      */
-    public int legs(int chick, int pig, int cow){
+    public static int legs(int chick, int pig, int cow){
 
         return chick*2 + pig * 4 + cow * 4;
 
