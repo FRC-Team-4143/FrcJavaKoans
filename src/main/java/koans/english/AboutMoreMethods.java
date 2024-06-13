@@ -13,6 +13,19 @@ public class AboutMoreMethods {
      * abs(-2) should return 2
      * 
      */
+    public static int abs(int number){
+
+        if(number < 0){
+
+            return -1 * number;
+
+        } else {
+
+            return number;
+
+        }
+
+    }
 
 
      /**
@@ -27,6 +40,19 @@ public class AboutMoreMethods {
      * min(4, 3) should return 3
      * 
      */
+    public static int min(int num1, int num2){
+
+        if(num1 < num 2){
+
+            return num1;
+
+        } else {
+
+            return num2;
+
+        }
+
+    }
 
 
      /**
