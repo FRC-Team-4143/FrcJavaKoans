@@ -248,6 +248,12 @@ public class AboutConsoleAndVariables {
      */
     public static void askNameAndAgeInConsole() {
 
+        System.out.println("What is your name?");
+        String name = readLine();
+        System.out.println("What is your age?");
+        String age = readLine();
+        System.out.println("Your name is " + name + " and your age is " + age + ".");
+
     }
 
     
@@ -285,6 +291,10 @@ public class AboutConsoleAndVariables {
      * 
      */
     public static void computeAgeIn5YearsConsole() {
+
+        System.out.println("What is your age?");
+        String age = readLine();
+        System.out.println("In 5 years from now, you will be" + (age + 5) + ".");
 
     }
 }
