@@ -142,6 +142,22 @@ public class AboutMethods {
      */
     public static void computeAgeIn5And10And20YearsConsoleWithMethod() {
 
+        int yearGap = 5;
+
+        for(int i = 0; i < 3; i++){
+
+            if(i == 2){
+
+                computeAge(yearGap * (i+2));
+
+            } else {
+
+                computeAge(yearGap * (i+1));
+
+            }      
+
+        }
+
     }
 
     /**
@@ -197,7 +213,7 @@ public class AboutMethods {
      * 
      */
     public static int square(int number) {
-        return 0;
+        return number * number;
     }    
 
     
