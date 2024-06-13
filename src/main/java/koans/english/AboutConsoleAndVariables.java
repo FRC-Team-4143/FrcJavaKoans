@@ -295,7 +295,7 @@ public class AboutConsoleAndVariables {
         System.out.println("What is your age?");
         String ageInput = readLine();
         int age = Integer.parseInt(ageInput);
-        System.out.println("In 5 years from now, you will be" + (age + 5) + ".");
+        System.out.println("In 5 years from now, you will be " + (age + 5) + ".");
 
     }
 }
