@@ -117,9 +117,10 @@ public sealed interface Expression {
         if (value instanceof String) {
             return String.format("\"%s\"", value);
         }
-        if (value.getClass().isArray()){
-            return Arrays.toString((int[])value);
-        }
+        // // TODO: Convert array params to string
+        // if (value instanceof int[]){
+        //     return Arrays.toString(value);
+        // }
         return value.toString();
     }
 
