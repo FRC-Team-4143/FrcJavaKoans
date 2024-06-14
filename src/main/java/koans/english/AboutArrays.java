@@ -1,7 +1,5 @@
 package koans.english;
 
-import java.util.Arrays;
-
 public class AboutArrays {
     /**
      * # Indexing an array
@@ -13,13 +11,13 @@ public class AboutArrays {
      * Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
      * 
      * In Java arrays can be formed from any data type, but all values in the array must be the same type. They are defined
-     * by listing the type followed by '[]' and then a name for the variable;
+     * by listing the type followed by '[]' and then a name for the variable.
      * 
      *     type brackets name
      *       v    v      v
      *      String[] cars;
      * 
-     * Values can be inserted into the array using a comma seperated list
+     * Values can be add into the array using a comma seperated list and are fixed in size when they are defined.
      * 
      *      String[] cars = {"BMW", "Ford", "Tesla"};
      * 
