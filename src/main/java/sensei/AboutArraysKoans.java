@@ -21,7 +21,7 @@ public class AboutArraysKoans {
             .beforeFirstTest(
                 assertKoanMethodIsInvokable("valueAtIndex", int[].class, int.class)
             )
-            .when(callKoanMethod("valueAtIndex", new Integer[]{1, 2, 3, 4, 5}, 1))
+            .when(callKoanMethod("valueAtIndex", new int[]{1, 2, 3, 4, 5}, 1))
             .then(
                 assertReturnValueEquals(2)
             )

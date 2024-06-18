@@ -201,7 +201,7 @@ final record Literal(Object value) implements Expression {
         Double.class,
         Boolean.class,
         Character.class,
-        String.class
+        String.class    
     );
 
     public Literal {
