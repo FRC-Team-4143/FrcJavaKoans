@@ -9,15 +9,20 @@ import engine.Koan;
  */
 public final class Wisdom {
     public static final List<List<Koan>> koans = List.of(
+        // Section 1
         AboutConsoleAndVariablesKoans.koans,
-        AboutMethodsKoans.koans,
-        AboutConditionsKoans.koans,
-        AboutMoreMethodsKoans.koans,
         AboutDecimalNumbersKoans.koans,
+        // Section 2
+        AboutMethodsKoans.koans,
+        AboutMoreMethodsKoans.koans,
+        AboutConditionsKoans.koans,
+        // Section 3
         AboutLoopsKoans.koans,
-        AboutNot7GameKoans.koans,
-        AboutArraysKoans.koans,
         AboutClassesKoans.koans,
-        AboutObjectsKoans.koans
+        // Section 4
+        AboutArraysKoans.koans,
+        AboutObjectsKoans.koans,
+        // Review Game
+        AboutNot7GameKoans.koans
     );
 }
