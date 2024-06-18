@@ -1,8 +1,10 @@
 package engine.script;
 
+import java.awt.List;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Set;
 
@@ -199,14 +201,21 @@ final record Literal(Object value) implements Expression {
         Double.class,
         Boolean.class,
         Character.class,
-        String.class,
-        int[].class
+        String.class
     );
 
     public Literal {
-        if (value != null && !ALLOWED_LITERAL_TYPES.contains(value.getClass())) {
+        if (value != null && !ALLOWED_LITERAL_TYPES.contains(value.getClass()) && !isArrayList(value) && !isArray(value)) {
             throw new KoanBugException("Only null, String, int[], and primitive types are allowed as literal in an Expression");
         }
+    }
+
+    private static boolean isArrayList(Object value){
+        return List.class.isAssignableFrom(value.getClass()) && ALLOWED_LITERAL_TYPES.contains(value.getClass().getComponentType());
+    }
+
+    public static boolean isArray(Object value){
+        return value.getClass().isArray() && ALLOWED_LITERAL_TYPES.contains(value.getClass().getComponentType());
     }
 
     @Override

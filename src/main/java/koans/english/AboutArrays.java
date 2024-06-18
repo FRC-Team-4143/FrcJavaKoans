@@ -69,18 +69,16 @@ public class AboutArrays {
      * indexOfValue({20, 10, 15, 5, 25}, 3) should return 5;
      * 
      */
-    public static int indexOfValue(int[] array, int value){
-        return 0;
-    }
+ 
 
     /**
-     * # Sorting an Array
+     * # Editing an Array
      * 
-     * Define the method 'sortArray' which as a parameter fo an interger array, and returns the array sorted in rising order
+     * Define the method 'zeroOutOdds' which as a parameter fo an interger array, and returns the array with all odd numbers as 0
      * 
      * ---------  TIPS -------------- 
      * 
-     * Sometimes it is helpful to sort an array for easier access or searching. In order to do that we will need to be able to edit already existing
+     * Because the array already exists and they are fixed size you will need to be able to edit already existing
      * array values. Lucky for us there is away to do that.
      * 
      *      int[] nums = {10, 11, 12, 13, 15};
@@ -89,12 +87,30 @@ public class AboutArrays {
      * -------------------------------
      * 
      * Expected result:
+     * sortArray({20, 10, 15, 5, 25}) should return {20, 10, 0, 0, 0};
+     * 
+     */
+   
+
+    /**
+     * # Sorting an Array
+     * 
+     * Define the method 'sortArray' which as a parameter fo an interger array, and returns the array sorted in rising order
+     * 
+     * ---------  TIPS -------------- 
+     * 
+     * Sometimes it is helpful to sort an array for easier access or searching. There are many different algorithms for sorting
+     * arrays, but java has some built in methods that we can use.
+     * 
+     * 'Arrays' is a static class with methods that can help us to advanced action
+     * 
+     * Arrays.sort(array);           <--- This will update the contents of array to be sorted 
+     * 
+     * -------------------------------
+     * 
+     * Expected result:
      * sortArray({20, 10, 15, 5, 25}) should return {5, 10, 15, 20, 25};
      *  
      */
-
-     public static int[] sortArray(int[] array){
-        return array;
-     }
 
 }

@@ -252,6 +252,8 @@ public class Texts {
         local("Indexing an array");
     static final Localizable<String> SEARCHING_AN_ARRAY =
         local("Searching an array");
+    static final Localizable<String> EDITING_AN_ARRAY = 
+        local("Editing an array");
     static final Localizable<String> SORTING_AN_ARRAY =
         local("Sorting an array");
 

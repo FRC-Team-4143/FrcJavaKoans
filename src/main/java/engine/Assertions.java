@@ -1,7 +1,9 @@
 package engine;
 
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.function.DoubleToIntFunction;
 import java.util.function.Function;
@@ -100,7 +102,7 @@ public class Assertions {
         };
     }
 
-    public static ResultAssertion assertReturnValueEquals(final int expected) {
+    public static ResultAssertion assertReturnValueEqualsArrassertReturnValueEquals(final int expected) {
         return (p, res) -> {
             if (res.executionResult == null) {
                 p.println(format(EXPECTED_TO_RETURN_INT_BUT_RETURNED_NULL, Formats.Red, code(res.resultExpressionSourceCode), code(expected)));
@@ -160,16 +162,43 @@ public class Assertions {
         }; 
     }
 
-    public static ResultAssertion assertReturnValueEquals(final int[] expected){
+    public static <T> String elemetwiseToString(final T array){
+        Object[] arr = (Object[])array;
+        String data = "[";
+        for(int i = 0; i < arr.length; i++){
+            data += arr[i].toString() + ((i < arr.length -1) ? ", ": "]");
+        }
+        return data;
+    }
+
+    public static <T> ResultAssertion assertReturnValueEqualsArr(final T expected){
          return (p, res) -> {
             if (res.executionResult == null) {
                 p.println(format(EXPECTED_TO_RETURN_INT_ARRAY_BUT_RETURNED_NULL, Formats.Red, res.resultExpressionSourceCode, expected));
                 return false;
-            } else if (!(res.executionResult instanceof int[])) {
+            } else if (!(res.executionResult.getClass().isArray())) {
                 p.println(format(EXPECTED_TO_RETURN_INT_ARRAY_BUT_RETURNED_OTHER_TYPE, Formats.Red, code(res.resultExpressionSourceCode), res.executionResult.getClass().getSimpleName()));
                 return false;
-            } else if (!Arrays.equals(((int[])res.executionResult), expected)) {
-                p.println(format(EXPECTED_TO_RETURN_INT_ARRAY_BUT_RETURNED, Formats.Red, res.resultExpressionSourceCode, Arrays.toString(expected), Arrays.toString((int[])res.executionResult)));
+            } else if (!Arrays.equals(((Object[])res.executionResult), (Object[])expected)) {
+                p.println(format(EXPECTED_TO_RETURN_INT_ARRAY_BUT_RETURNED, Formats.Red, res.resultExpressionSourceCode, elemetwiseToString(expected), elemetwiseToString((T)res.executionResult)));
+                return false;
+            }
+
+            p.println(format(OK_RETURNED_INT_ARRAY, Formats.Green, code(res.resultExpressionSourceCode), code(expected)));
+            return true;
+        }; 
+    }
+
+    public static <T> ResultAssertion assertReturnValueEqualsList(List<T> expected){
+         return (p, res) -> {
+            if (res.executionResult == null) {
+                p.println(format(EXPECTED_TO_RETURN_LIST_BUT_RETURNED_NULL, Formats.Red, res.resultExpressionSourceCode, expected));
+                return false;
+            } else if (!(res.executionResult instanceof int[])) {
+                p.println(format(EXPECTED_TO_RETURN_LIST_BUT_RETURNED_OTHER_TYPE, Formats.Red, code(res.resultExpressionSourceCode), res.executionResult.getClass().getSimpleName()));
+                return false;
+            } else if (!((List<T>)res.executionResult).equals(expected)) {
+                p.println(format(EXPECTED_TO_RETURN_LIST_BUT_RETURNED, Formats.Red, res.resultExpressionSourceCode, expected.toString(), (List<T>)res.executionResult));
                 return false;
             }
 
