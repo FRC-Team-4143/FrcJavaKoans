@@ -4,7 +4,7 @@ public class AboutDecimalNumbers {
     /**
      * # Converting a measure of length
      * 
-     * Write a method named 'toCm' which has a parameter for a number of inches, and returns the conversion in centimeters.
+     * Define the method 'toCm' which has a parameter for a number of inches, and returns the conversion in centimeters.
      * 
      * ---------   TIPS  --------------
      * 
@@ -23,12 +23,15 @@ public class AboutDecimalNumbers {
      * toCm(2.0) should return 5.08
      * 
      */
+    public static double toCm(int inches){
+        return 0;
+    }
 
 
     /**
      * # Converting the other way
      * 
-     * Write a method named 'toInches' which does the opposite of the previous one.
+     * Define the method 'toInches' which does the opposite of the previous one.
      * 
      * -------------------------------
      * 
@@ -37,12 +40,15 @@ public class AboutDecimalNumbers {
      * toInches(5.08) should return 2.0
      * 
      */
+    public static double toInches(){
+        return 0;
+    }
 
 
     /**
      * # Computing some geometry
      * 
-     * Write a method named 'rectangleArea' which computes the area of a rectangle, given the length of its sides.
+     * Define the method 'rectangleArea' which computes the area of a rectangle, given the length of its sides.
      * 
      * -------------------------------
      * 
@@ -51,12 +57,15 @@ public class AboutDecimalNumbers {
      * rectangleArea(3.6, 2.0) should return 7.2
      * 
      */
+    public static double rectangleArea(double width, double height){
+        return 0;
+    }
 
 
      /**
      * # Computing how long a robot is traveling step 1
      * 
-     * Write a method named 'wheelCircumference' which computes the circumference of a robot wheel given the wheel's radius.
+     * Define the method 'wheelCircumference' which computes the circumference of a robot wheel given the wheel's radius.
      * 
      * ---------   TIPS  --------------
      * 
@@ -69,12 +78,15 @@ public class AboutDecimalNumbers {
      * wheelCircumference(1) should return 6.28
      * 
      */
+    public static double wheelCircumference(double radius){
+        return 0;
+    }
 
 
     /**
      * # Computing how long a robot is traveling step 2
      * 
-     * Write a method named 'wheelRotations' which computes the number of rotations of the wheel given the number of rotations of the motor and the gear ratio.
+     * Define the method 'wheelRotations' which computes the number of rotations of the wheel given the number of rotations of the motor and the gear ratio.
      * 
      * ---------   TIPS  --------------
      * 
@@ -88,19 +100,18 @@ public class AboutDecimalNumbers {
      * wheelRotations(2.0, 0.2) should return 0.4
      * 
      */
+    public static double wheelRotations(double rotations, double ratio){
+        return 0;
+    }
 
 
     /**
      * # Computing how long a robot is traveling final step
-     * 
-     * Use the previous 2 methods in a new one named 'toDistance' which computes the distance the wheel traveled given:
-     * 
+     *
      * - The number of rotations of the motor.
      * - The gear ratio of the gearbox.
      * - The wheel radius.
-     * 
-     * Warning! Do not recode the computations already coded in the previous 2 methods. Instead, reuse the previous 2 methods in this one.
-     * 
+     *
      * -------------------------------
      * 
      * Expected result:
@@ -108,6 +119,9 @@ public class AboutDecimalNumbers {
      * toDistance(10.0, 0.2, 2.0) should return 25.12
      * 
      */
+    public static double toDistance(double rotations, double ratio, double radius){
+        return 0;
+    }
 
      
 }
