@@ -43,6 +43,12 @@ public class AboutDecimalNumbers {
      * 
      */
 
+    public static double toInches(double num){
+
+        return num / 2.54;
+
+    }
+
 
     /**
      * # Computing some geometry
@@ -56,6 +62,7 @@ public class AboutDecimalNumbers {
      * rectangleArea(3.6, 2.0) should return 7.2
      * 
      */
+    public static 
 
 
      /**
