@@ -23,6 +23,11 @@ public class AboutDecimalNumbers {
      * toCm(2.0) should return 5.08
      * 
      */
+    public static double toCm(double num){
+
+        return num * 2.54;
+
+    }
 
 
     /**
