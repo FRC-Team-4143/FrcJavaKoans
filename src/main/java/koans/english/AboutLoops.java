@@ -62,6 +62,15 @@ public class AboutLoops {
      * Hello
      * 
      */
+    public static void helloNTimes(int n){
+
+          for(int i = 0; i < n; i++){
+
+               System.out.println("Hello");
+
+          }
+
+    }
 
 
      /**
@@ -80,6 +89,15 @@ public class AboutLoops {
      * 3
      * 
      */
+     public static void displayNumbers(int n){
+          
+          for(int i = 0; i < n; i++){
+          
+               System.out.println(i+1);
+
+          }
+
+     }
 
 
      /**
@@ -98,6 +116,15 @@ public class AboutLoops {
      * 1
      * 
      */
+    public static void displayReverseNumbers(int n){
+          
+     for(int i = n; i > 0; i--){
+     
+          System.out.println(i);
+
+     }
+
+}
 
 
      /**
@@ -117,6 +144,17 @@ public class AboutLoops {
      * 28
      * 
      */
+     public static void sevens(int num){
+
+          int count = 1;
+
+          while(7*count < num){
+
+               System.out.println(7*num);
+
+          }
+
+    }
 
 
      /**
@@ -144,6 +182,48 @@ public class AboutLoops {
      * 16
      * 
      */
+    public static void sevensOrEights(int num){
+
+          int count = 1;
+
+          boolean isSeven = true;
+
+          boolean isFinished = false;
+
+          while(!isFinished){
+
+               if(isSeven){
+
+                    if(7*count > num){
+
+                         isFinished = true;
+
+                    } else {
+
+                         System.out.println(7*num);
+                         isSeven = false;
+
+                    }
+
+               } else {
+
+                    if(8*count > num){
+
+                         isFinished = true;
+
+                    } else {
+
+                         System.out.println(8*num);
+                         isSeven = true;
+                         count++;
+
+                    }
+                    
+               }
+
+          }
+
+    }
 
 
      /**
@@ -165,6 +245,19 @@ public class AboutLoops {
      * exponent(5, 3) should return 125
      * 
      */
+    public static int exponent(int num1, int num2){
+
+          int finalInt = 1;
+
+          for(int i = 0; i < num2; i++){
+               
+               finalInt *= num1;
+          
+          }
+
+          return finalInt;
+
+    }
 
 
      /**
@@ -185,6 +278,19 @@ public class AboutLoops {
      * exponent2(5, 3) should return 125
      * 
      */
+    public static int exponent2(int num1, int num2){
+
+          if(num2 == 0){
+
+               return 1;
+               
+          } else {
+
+               return exponent(num1, num2);
+
+          }
+     
+    }
 
 
      /**
@@ -206,6 +312,19 @@ public class AboutLoops {
      * factorial(5) should return 120
      * 
      */
+    public static int factorial(int num){
+
+          int finalInt = 1;
+
+          for(int i = 1; i <= num; i++){
+
+               finalInt *= i;
+
+          }
+
+          return finalInt;
+
+    }
 
 
 }
