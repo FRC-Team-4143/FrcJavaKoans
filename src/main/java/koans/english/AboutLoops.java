@@ -148,9 +148,10 @@ public class AboutLoops {
 
           int count = 1;
 
-          while(7*count < num){
+          while(7*count <= num){
 
-               System.out.println(7*num);
+               System.out.println(7*count);
+               count++;
 
           }
 
@@ -200,7 +201,7 @@ public class AboutLoops {
 
                     } else {
 
-                         System.out.println(7*num);
+                         System.out.println(7*count);
                          isSeven = false;
 
                     }
@@ -213,7 +214,7 @@ public class AboutLoops {
 
                     } else {
 
-                         System.out.println(8*num);
+                         System.out.println(8*count);
                          isSeven = true;
                          count++;
 
