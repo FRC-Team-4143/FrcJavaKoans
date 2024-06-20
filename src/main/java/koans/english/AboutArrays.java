@@ -87,7 +87,7 @@ public class AboutArrays {
      * -------------------------------
      * 
      * Expected result:
-     * sortArray({20, 10, 15, 5, 25}) should return {20, 10, 0, 0, 0};
+     * zeroOutOdds({20, 10, 15, 5, 25}) should return {20, 10, 0, 0, 0};
      * 
      */
    
@@ -102,7 +102,7 @@ public class AboutArrays {
      * Sometimes it is helpful to sort an array for easier access or searching. There are many different algorithms for sorting
      * arrays, but java has some built in methods that we can use.
      * 
-     * 'Arrays' is a static class with methods that can help us to advanced action
+     * 'Arrays' is a static class with methods that can help us to do advanced action
      * 
      * Arrays.sort(array);           <--- This will update the contents of array to be sorted 
      * 

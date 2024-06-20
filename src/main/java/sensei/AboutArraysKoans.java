@@ -1,7 +1,7 @@
 package sensei;
 
 import static engine.Assertions.assertReturnValueEquals;
-import static engine.Assertions.assertReturnValueEqualsArr;
+import static engine.Assertions.assertReturnValueEqualsArray;
 import static engine.Assertions.assertKoanMethodIsInvokable;
 import static engine.Localizable.localClass;
 import static engine.script.Expression.callKoanMethod;
@@ -53,17 +53,17 @@ public class AboutArraysKoans {
             .beforeFirstTest(
                 assertKoanMethodIsInvokable("zeroOutOdds", int[].class)
             )
-            .when(callKoanMethod("sortArray", new int[]{1, 2, 3, 4, 5}))
+            .when(callKoanMethod("zeroOutOdds", new int[]{1, 2, 3, 4, 5}))
             .then(
-                assertReturnValueEqualsArr(new int[]{0, 2, 0, 4, 0})
+                assertReturnValueEqualsArray(new int[]{0, 2, 0, 4, 0})
             )
-            .when(callKoanMethod("sortArray", new int[]{2, 10, 3, 4, 6, 8, 7, 5, 9, 1}))
+            .when(callKoanMethod("zeroOutOdds", new int[]{2, 10, 3, 4, 6, 8, 7, 5, 9, 1}))
             .then(
-                assertReturnValueEqualsArr(new int[]{2, 10, 0, 4, 6, 8, 0, 0, 0, 0})
+                assertReturnValueEqualsArray(new int[]{2, 10, 0, 4, 6, 8, 0, 0, 0, 0})
             )
-            .when(callKoanMethod("sortArray", new int[]{5, 15, 35, -1, 6}))
+            .when(callKoanMethod("zeroOutOdds", new int[]{5, 15, 35, -1, 6}))
             .then(
-                assertReturnValueEqualsArr(new int[]{0, 0, 0, 0, 6})
+                assertReturnValueEqualsArray(new int[]{0, 0, 0, 0, 6})
             ),
         new Koan(CLASS, SORTING_AN_ARRAY)
             .beforeFirstTest(
@@ -71,15 +71,15 @@ public class AboutArraysKoans {
             )
             .when(callKoanMethod("sortArray", new int[]{1, 2, 3, 4, 5}))
             .then(
-                assertReturnValueEqualsArr(new int[]{1, 2, 3, 4, 5})
+                assertReturnValueEqualsArray(new int[]{1, 2, 3, 4, 5})
             )
             .when(callKoanMethod("sortArray", new int[]{2, 10, 3, 4, 6, 8, 7, 5, 9, 1}))
             .then(
-                assertReturnValueEqualsArr(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
+                assertReturnValueEqualsArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10})
             )
             .when(callKoanMethod("sortArray", new int[]{5, 15, 35, -1, 6}))
             .then(
-                assertReturnValueEqualsArr(new int[]{-1, 5, 6, 15, 35})
+                assertReturnValueEqualsArray(new int[]{-1, 5, 6, 15, 35})
             )
     );
 }

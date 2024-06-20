@@ -195,18 +195,18 @@ public sealed interface Expression {
 
 final record Literal(Object value) implements Expression {
     private static final Set<Class<?>> ALLOWED_LITERAL_TYPES = Set.of(
-        Integer.class,
-        Long.class,
-        Float.class,
-        Double.class,
-        Boolean.class,
-        Character.class,
+        Integer.class,      int.class,
+        Long.class,         long.class,
+        Float.class,        float.class,
+        Double.class,       double.class,
+        Boolean.class,      boolean.class,
+        Character.class,    char.class,
         String.class    
     );
 
     public Literal {
         if (value != null && !ALLOWED_LITERAL_TYPES.contains(value.getClass()) && !isArrayList(value) && !isArray(value)) {
-            throw new KoanBugException("Only null, String, int[], and primitive types are allowed as literal in an Expression");
+            throw new KoanBugException("Only null, String, Arrays/List of primitive types and primitive types are allowed as literal in an Expression");
         }
     }
 
@@ -214,7 +214,7 @@ final record Literal(Object value) implements Expression {
         return List.class.isAssignableFrom(value.getClass()) && ALLOWED_LITERAL_TYPES.contains(value.getClass().getComponentType());
     }
 
-    public static boolean isArray(Object value){
+    private static boolean isArray(Object value){
         return value.getClass().isArray() && ALLOWED_LITERAL_TYPES.contains(value.getClass().getComponentType());
     }
 

@@ -1,7 +1,6 @@
 package engine;
 
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -102,7 +101,7 @@ public class Assertions {
         };
     }
 
-    public static ResultAssertion assertReturnValueEqualsArrassertReturnValueEquals(final int expected) {
+    public static ResultAssertion assertReturnValueEquals(final int expected) {
         return (p, res) -> {
             if (res.executionResult == null) {
                 p.println(format(EXPECTED_TO_RETURN_INT_BUT_RETURNED_NULL, Formats.Red, code(res.resultExpressionSourceCode), code(expected)));
@@ -171,12 +170,12 @@ public class Assertions {
         return data;
     }
 
-    public static <T> ResultAssertion assertReturnValueEqualsArr(final T expected){
+    public static <T> ResultAssertion assertReturnValueEqualsArray(final T expected){
          return (p, res) -> {
             if (res.executionResult == null) {
                 p.println(format(EXPECTED_TO_RETURN_INT_ARRAY_BUT_RETURNED_NULL, Formats.Red, res.resultExpressionSourceCode, expected));
                 return false;
-            } else if (!(res.executionResult.getClass().isArray())) {
+            } else if (!(res.executionResult.getClass().getComponentType().isPrimitive() && res.executionResult.getClass().isArray())) {
                 p.println(format(EXPECTED_TO_RETURN_INT_ARRAY_BUT_RETURNED_OTHER_TYPE, Formats.Red, code(res.resultExpressionSourceCode), res.executionResult.getClass().getSimpleName()));
                 return false;
             } else if (!Arrays.equals(((Object[])res.executionResult), (Object[])expected)) {
@@ -194,7 +193,8 @@ public class Assertions {
             if (res.executionResult == null) {
                 p.println(format(EXPECTED_TO_RETURN_LIST_BUT_RETURNED_NULL, Formats.Red, res.resultExpressionSourceCode, expected));
                 return false;
-            } else if (!(res.executionResult instanceof int[])) {
+                
+            } else if (!(res.executionResult.getClass().getComponentType().isPrimitive() && List.class.isAssignableFrom(res.executionResult.getClass()))) {
                 p.println(format(EXPECTED_TO_RETURN_LIST_BUT_RETURNED_OTHER_TYPE, Formats.Red, code(res.resultExpressionSourceCode), res.executionResult.getClass().getSimpleName()));
                 return false;
             } else if (!((List<T>)res.executionResult).equals(expected)) {
