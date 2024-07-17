@@ -72,7 +72,7 @@ public class AboutArrays {
     public static int indexOfValue(int[] array, int value){
         int count = 0;
         
-        while(count < array.length && value != array[count]){
+        while(count < array.length-1 && value != array[count]){
 
             count++;
 

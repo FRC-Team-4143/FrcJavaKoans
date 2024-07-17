@@ -1,5 +1,7 @@
 package koans.english;
 
+import utils.MathUtils;
+
 public class AboutClasses {
     /**
      * # Classes and packages
@@ -80,6 +82,12 @@ public class AboutClasses {
      * 
      * displayCube(3) should display '27' in the console.
      */
+
+    public static void displayCube(int n){
+
+        System.out.println(utils.MathUtils.cube(n));
+
+    }
 
 
     /**
