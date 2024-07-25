@@ -64,8 +64,19 @@ public class AboutConditions {
      * sign(2) should return "positive"
      * 
      */
-
-
+    public static String sign(int inputNumber) {
+    
+        String positive = "positive";
+        String negative = "negative";
+        
+        if (inputNumber >= 0) {
+                return positive;
+        }
+            else{
+                return negative;
+            }
+        }
+    
     /**
      * # Else if construct
      * 
@@ -95,7 +106,22 @@ public class AboutConditions {
      * signOrZero(0) should return "zero"
      * 
      */
-
+    public static String signOrZero(int inputNumber) {
+    
+        String positive = "positive";
+        String zero = "zero";
+        String negative = "negative";
+        
+        if (inputNumber > 0) {
+                return positive;
+        }
+            else if (inputNumber == 0) {
+                return zero;
+            }
+            else {
+                return negative;
+            }
+        }
 
     /**
      * # An exam's grade
@@ -127,4 +153,28 @@ public class AboutConditions {
      * gradeComment(0) should return "Oops!"
      * 
      */    
+    public static String gradeComment (int inputNumber) {
+    
+        String error = "You cheat!";
+        String perfect = "Congratulations! You got everything right!";
+        String zero = "Oops!";
+        String fail = "You failed!";
+        String pass = "Congratulations! You pass!";
+
+        if (inputNumber > 100 || inputNumber <0) {
+                return error;
+        }
+            else if (inputNumber == 100) {
+                return perfect;
+            }
+            else if (inputNumber == 0) {
+                return zero;
+            }
+            else if (inputNumber < 60 && inputNumber > 0) {
+                return fail;
+            }
+            else {
+            return pass;
+        }
+    }
 }

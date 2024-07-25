@@ -14,6 +14,16 @@ public class AboutMoreMethods {
      * 
      */
 
+    public static int abs (int inputNumber) {
+    
+        if(inputNumber > 0) {
+            return inputNumber;
+        }
+        else {
+            return inputNumber *(-1);
+        }
+    
+    }
 
      /**
      * # What's the min value?
@@ -27,7 +37,16 @@ public class AboutMoreMethods {
      * min(4, 3) should return 3
      * 
      */
-
+  
+     public static int min (int inputNumber1, int inputNumber2) {
+        
+        if(inputNumber1 > inputNumber2) {
+            return inputNumber2;
+        }
+        else {
+            return inputNumber1;
+        }
+    }
 
      /**
      * # Computing the remainder of an integer division
@@ -55,7 +74,11 @@ public class AboutMoreMethods {
      * remainder(17, 5) should return 2
      * 
      */
-
+    public static int remainder (int inputNumber1, int inputNumber2) {
+        int result = inputNumber1 / inputNumber2;
+        int remainder = inputNumber1 - inputNumber2*result;
+        return remainder;
+    }
 
     /**
      * # Computing whether a number is even or not
@@ -85,8 +108,17 @@ public class AboutMoreMethods {
      * isEven(5) should return false
      * 
      */
-
-     
+    public static boolean isEven (int inputNumber1) {
+        
+        int result = inputNumber1/2;
+        if (inputNumber1 - result*2 == 0) {
+            return true;
+        } 
+        else {
+            return false;
+        }
+    }
+             
     /**
      * # Computing whether a number is a multiple of another
      * 
@@ -104,7 +136,16 @@ public class AboutMoreMethods {
      * isMultiple(15, 5) should return true
      * 
      */
-
+    public static boolean isMultiple (int inputNumber1, int inputNumber2) {
+        
+        int result = inputNumber1/inputNumber2;
+        if (inputNumber1 - result*inputNumber2 == 0) {
+            return true;
+        } 
+        else {
+            return false;
+        }
+    }
      
     /**
      * # Fizz Buzz
@@ -127,5 +168,21 @@ public class AboutMoreMethods {
      * Buzz
      * 
      */ 
-      
+    public static void fizzBuzz (int inputNumber) {
+        
+        if (isMultiple(inputNumber, 3) && isMultiple(inputNumber, 5)){
+            System.out.println("FizzBuzz"); 
+        }
+        else if (isMultiple(inputNumber,3)){
+            System.out.println("Fizz"); 
+        }
+        else if (isMultiple(inputNumber,5)){
+            System.out.println("Buzz"); 
+        }
+        else {
+            System.out.println(inputNumber); 
+        }
+        
+    }
+    
 }
