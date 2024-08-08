@@ -22,8 +22,7 @@ import engine.Localizable;
 
 public class AboutInterfacesKoans {
     private static final Localizable<Class<?>> CLASS =
-        localClass(bonuses.english.AboutInterfaces.class)
-        .fr(bonuses.french.AboutInterfaces.class);
+        localClass(bonuses.english.AboutInterfaces.class);
 
     public static final List<Koan> koans = List.of(
         new Koan(CLASS, FIRST_INTERFACE_IMPLEMENTATIONS)

@@ -20,8 +20,7 @@ import engine.Localizable;
 
 public class AboutArraysKoans {
     private static final Localizable<Class<?>> CLASS =
-        localClass(bonuses.english.AboutArrays.class)
-        .fr(bonuses.french.AboutArrays.class);
+        localClass(bonuses.english.AboutArrays.class);
 
     public static final List<Koan> koans = List.of(
         new Koan(CLASS, FOR_LOOPS)
