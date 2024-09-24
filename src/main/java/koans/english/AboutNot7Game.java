@@ -125,6 +125,16 @@ public class AboutNot7Game {
      * 
      * Write a method 'askQuestion(String questionText)' asking a question to the user, and returns a boolean stating if the user answered 'y'.
      * 
+     * ---------   INDICES   --------------
+     * 
+     * Java has a litle quirk. For testing if 2 String are equal, we can't use '=='. Ex:
+     * 
+     *     "abc" == "abc" // Always false!!!
+     * 
+     * To compare 2 String, you need to use the 'equals' method on a String:
+     * 
+     *     "abc".equals("abc") // Return true, as it should
+     * 
      * -------------------------------
      * 
      * Expected result:
@@ -168,6 +178,9 @@ public class AboutNot7Game {
      * 
      * Use a loop with a condition on the return value of the askQuestion() method.
      * You will have to create a boolean variable initialized with 'true' so that during the loop, you record whether the user wants to continue.
+     *
+     * You may use a while loop for this specific instance. 
+     * Implementation will be easy if a while loop is used, but be sure to define your condition and updated the values using in the conditions logic correctly.
      * 
      * -------------------------------
      * 
